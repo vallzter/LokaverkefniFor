@@ -1,0 +1,147 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Lokaverk2017Klasar;
+namespace Lokaverk2017
+{
+    class LokaverkFor
+        /*Valgeir Ingi Þórðarson
+         * LokaverkefniFOR
+         */
+    {
+        static Random rand = new Random();
+        static List<GrunnHermaður> vellir = new List<GrunnHermaður>();
+        static List<GrunnHermaður> dressar = new List<GrunnHermaður>();
+        static List<GrunnHermaður> pessar = new List<GrunnHermaður>();
+        static int lif = 0;
+        static int afl = 0;
+        static int vopn = 0;
+        static int deild = 0;
+
+        static int bardagi1 = 0;
+        static int bardagi2 = 0;
+
+        static int bardagi3 = 0;
+
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("-----------Stríðs Valdmynd---------");
+            Console.WriteLine("\n-Það eru 3 herdeildir þær eru Vellir, Dressar og Pessar");
+            Console.WriteLine("\n-Í hverri deild eru 5 Hermenn og 2 Kraft Hermenn");
+            Console.WriteLine("\n-Hver hermaður hefur mismunandi eiginleikana=");
+            Console.WriteLine("\n-Líf frá: 1-5, Afl: 1-5 og");
+            Console.WriteLine("\n-Vopn: 1 = Sverð, 2 = Spjót og 3 = Exi");
+            Console.WriteLine("\n-Krafthermennirnir hafa hinsvegar eiginleikana=");
+            Console.WriteLine("\n-Líf frá: 10-15, Afl 1-10 og Vopnin alveg eins.");
+            Console.WriteLine("Vinsamlegast ýttu á takka til að byrja stríðið");
+            Console.Read();
+
+                    //Bæta við hermönnum i deildirnar
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Hermadur_D hd = new Hermadur_D(rand.Next(1, 6), rand.Next(1, 6), rand.Next(1, 4));
+                        dressar.Add(hd);
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Krafthermadur_D kd = new Krafthermadur_D(rand.Next(10, 16), rand.Next(1, 11), rand.Next(1, 4));
+                        dressar.Add(kd);
+                    }
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Hermadur_P hp = new Hermadur_P(rand.Next(1, 6), rand.Next(1, 6), rand.Next(1, 4));
+                        pessar.Add(hp);
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Krafthermadur_P kp = new Krafthermadur_P(rand.Next(10, 16), rand.Next(1, 11), rand.Next(1, 4));
+                        pessar.Add(kp);
+                    }
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Hermadur_V hv = new Hermadur_V(rand.Next(1, 6), rand.Next(1, 6), rand.Next(1, 4));
+                        vellir.Add(hv);
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Krafthermadur_V kv = new Krafthermadur_V(rand.Next(10, 16), rand.Next(1, 11), rand.Next(1, 4));
+                        vellir.Add(kv);
+                    }//
+            
+            bardagi1 = rand.Next(1, 4);
+            bardagi2 = rand.Next(1, 4);
+
+            while (bardagi1 == bardagi2)
+            {
+                bardagi1 = rand.Next(1, 4);
+                bardagi2 = rand.Next(1, 4);
+            }
+            hverByrjar(bardagi1, bardagi2);
+            Console.ReadKey();
+        }
+        //hver byrjar fyrsta bardagann
+        static void hverByrjar(int fyrsti1, int fyrsti2)
+        {
+            if (fyrsti1 == 0 && fyrsti2 == 1)
+            {
+                Console.WriteLine("Dressar vs Pessum.");
+            }
+            else if (fyrsti1 == 1 && fyrsti2 == 0)
+            {
+                Console.WriteLine("Pessar vs Dressum.");
+            }
+            else if (fyrsti1 == 0 && fyrsti2 == 2)
+            {
+                Console.WriteLine("Dressar vs Vellum.");
+            }
+            else if (fyrsti1 == 2 && fyrsti2 == 0)
+            {
+                Console.WriteLine("Vellir vs Dressum.");
+            }
+            else if (fyrsti1 == 1 && fyrsti2 == 2)
+            {
+                Console.WriteLine("Pessar vs Vellum.");
+            }
+            else if (fyrsti1 == 2 && fyrsti2 == 1)
+            {
+                Console.WriteLine("Vellir vs Pessum.");
+            }
+            else
+            {
+                Console.WriteLine("Virkar ekki");
+            }
+        }
+        //bardagi numer 2
+        static void hverErAnnar(int fyrsti1, int fyrsti2)
+        {
+            if (fyrsti1 == 1 && fyrsti2 == 2 || fyrsti2 == 1 && fyrsti1 == 2)
+            {
+                bardagi3 = 3;
+                if (bardagi3 == 1)
+                {
+                    Console.WriteLine("Pessar vs Velli");
+                }//
+                else if (bardagi3 == 2)
+                {
+                    Console.WriteLine("Pessar vs Dressum");
+                }
+            }//
+            else if (fyrsti1 == 2 && fyrsti2 == 3 || fyrsti2 == 2 && fyrsti1 == 3)
+            {
+                bardagi3 = 1;
+                if (bardagi3 == 2)
+                {
+                    Console.WriteLine("Vellir vs Dressa");
+                }
+                else if (bardagi3 == 1)
+                {
+                    Console.WriteLine("Vellir vs Pessa");
+                }
+            }
+
+        }
+    }
+}
