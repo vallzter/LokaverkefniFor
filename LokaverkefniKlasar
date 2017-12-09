@@ -1,0 +1,747 @@
+ public class Dressar : GrunnHermaður
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Dressar(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//smidur end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+    
+ -----------------------------------
+ public class GrunnHermaður
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+
+        public GrunnHermaður(int lif, int styrkur, int vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//smidur end
+        public virtual string ToString()
+        {
+            return string.Format("Ég er hermaður og er með "+Health+" líf og "+Strength+" Styrk og þetta "+Weapon+" Vopn");
+        }
+    }
+---------------------------------------------
+public class Hermadur_D : Dressar
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Hermadur_D(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//smidur end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+ ----------------------------------------------------
+ public class Hermadur_P : Pessar
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Hermadur_P(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//smidur end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+---------------------------------------------------
+public class Hermadur_V : Vellir
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Hermadur_V(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//smidur end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+     }
+--------------------------------------------------------
+public class Krafthermadur_D : Dressar
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 10 || value > 15)//Set if svo það hermaðurinn getur ekki fengið hærra en 15 í lífi og lægra en 10
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 10)//Set if svo það hermaðurinn getur ekki fengið hærra en 10 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Krafthermadur_D(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//KrafthermadurD end
+        public override string ToString()
+        {
+            return string.Format("Halló ég er Krafthermaður og hef " + Health + " líf og " + Strength + " Styrkleika og þetta " + Weapon + " vopn");
+        }
+    }
+-------------------------------------------------------
+public class Krafthermadur_P : Pessar
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 10 || value > 15)//Set if svo það hermaðurinn getur ekki fengið hærra en 15 í lífi og lægra en 10
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 10)//Set if svo það hermaðurinn getur ekki fengið hærra en 10 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Krafthermadur_P(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//KrafthermadurP end
+        public override string ToString()
+        {
+            return string.Format("Halló ég er Krafthermaður og hef " + Health + " líf og " + Strength + " Styrkleika og þetta " + Weapon + " vopn");
+        }
+    }
+------------------------------------------------------
+public class Krafthermadur_V : Vellir
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 10 || value > 15)//Set if svo það hermaðurinn getur ekki fengið hærra en 15 í lífi og lægra en 10
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 10)//Set if svo það hermaðurinn getur ekki fengið hærra en 10 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Krafthermadur_V(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//KrafthermadurV end
+        public override string ToString()
+        {
+            return string.Format("Halló ég er Krafthermaður og hef " + Health + " líf og " + Strength + " Styrkleika og þetta " + Weapon + " vopn");
+        }
+    }
+    
+  ----------------------------------------
+   public class Pessar : GrunnHermaður
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Pessar(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//Pessar end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+------------------------------------------------------
+public class Vellir : GrunnHermaður
+    {
+        //breytur
+        private int health;
+        private int strength;
+        private int weapon;
+
+        public int Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í lífi og lægra en 0
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
+        }//health end
+        public int Strength
+        {
+            get
+            {
+                return strength;
+            }
+            set
+            {
+                if (value < 0 || value > 5)//Set if svo það hermaðurinn getur ekki fengið hærra en 5 í strenght og lægra en 0
+                {
+                    strength = 0;
+                }
+                else
+                {
+                    value = strength;
+                }
+            }
+        }//strength 
+        public int Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                if (value < 1 || value > 3)//Hef if hérna svo hann geti bara fengið vopn frá 1-3
+                {
+                    weapon = 1;
+                }
+                else
+                {
+                    value = weapon;
+                }
+            }
+        }//weapon end
+        public Vellir(int lif, int styrkur, int vopn)
+            :base(lif, styrkur, vopn)
+        {
+            health = lif;
+            strength = styrkur;
+            weapon = vopn;
+        }//Vellir end
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+    }
+
+     
+ 
+    
+    
+ 
